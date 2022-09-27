@@ -4,15 +4,15 @@ import 'package:http/http.dart' as http;
 import 'package:newnoticias/models/article.model.dart';
 
 class ArticuloProvider {
-  Future<List<ArticleModel>> getArticles() async {
+  Future<List<ArticleModel>> getArticles(String q) async {
     List<ArticleModel> articles = [];
     var client = http.Client();
     try {
       Map<String, String> parametros = {
-        'q': 'tesla',
-        'from': '2022-08-17',
+        'q': q,
+        'from': '2022-09-10',
         'sortBy': 'publishedAt',
-        'apiKey': '3fb17bf7ea204cf5839f97817bd61194'
+        'apiKey': 'aee95d27cff5438696886c5f62c1c013'
       };
 
       //var url = Uri.https('https://newsapi.org', 'v2/everything', parametros);
